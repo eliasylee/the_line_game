@@ -1,0 +1,36 @@
+{
+  "name": "the_line_game",
+  "version": "1.0.0",
+  "description": "### Background",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eliasylee/bomb_tag.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliasylee/bomb_tag/issues"
+  },
+  "homepage": "https://github.com/eliasylee/bomb_tag#readme",
+  "devDependencies": {
+    "babel-eslint": "^4.0.5",
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-react": "^6.2.1",
+    "eslint-plugin-require-path-exists": "^1.1.5",
+    "eslint-plugin-standard": "^2.0.0",
+    "babel-eslint": "^4.0.5"
+  },
+  "dependencies": {
+    "eslint": "^3.5.0",
+    "eslint-config-standard": "^6.0.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.0"
+  }
+}
