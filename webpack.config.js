@@ -2,7 +2,7 @@ let path = require("path");
 
 module.exports = {
   context: __dirname,
-  entry: "./lib/line_game.js",
+  entry: "./frontend/the_line_game.jsx",
   output: {
     path: './',
     filename: "bundle.js",
