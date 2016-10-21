@@ -9,7 +9,7 @@ class ChoicesForm extends React.Component {
   }
 
   handleCreateChoice() {
-
+    this.props.createChoice(this.state.choice);
   }
 
   render() {

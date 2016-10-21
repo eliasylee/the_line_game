@@ -1,5 +1,6 @@
 import React from 'react';
 import ChoicesItem from './choices_item';
+import ChoicesFormContainer from '../choices_form/choices_form_container';
 
 class Choices extends React.Component {
   renderChoices() {
@@ -21,6 +22,7 @@ class Choices extends React.Component {
       <div className="choicesPage">
         <div className="choicesHeader">The Line Game</div>
         {this.renderChoices()}
+        <ChoicesFormContainer />
       </div>
     );
   }

@@ -27,8 +27,12 @@ class ChoicesItem extends React.Component {
       );
     } else {
       return (
-        <ChoicesFormContainer key={key}
-                              count={count} />
+        <div classname="choicesFormBox">
+          <ChoicesFormContainer key={key}
+                                count={count} />
+          <div className="choiceViewToggle"
+               onClick={this.toggleView}>Edit</div>
+        </div>
       );
     }
   }
@@ -38,7 +42,7 @@ class ChoicesItem extends React.Component {
       <div className="choicesItemBox">
         {this.viewOrEdit()}
       </div>
-    )
+    );
   }
 }
 

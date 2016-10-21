@@ -1,7 +1,7 @@
 export const ChoiceConstants = {
   CREATE_CHOICE: 'CREATE_CHOICE',
   UPDATE_CHOICE: 'UPDATE_CHOICE',
-  DELETE_CHOICE: 'DELETE_CHOICE',
+  DESTROY_CHOICE: 'DESTROY_CHOICE',
   CLEAR_CHOICES: 'CLEAR_CHOICES'
 };
 
@@ -15,8 +15,8 @@ export const updateChoice = choice => ({
   choice
 });
 
-export const deleteChoice = choice => ({
-  type: ChoiceConstants.DELETE_CHOICE,
+export const destroyChoice = choice => ({
+  type: ChoiceConstants.DESTROY_CHOICE,
   choice
 });
 

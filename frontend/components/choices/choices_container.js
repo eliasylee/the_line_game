@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import Options from './options';
 import { createChoice,
          updateChoice,
-         deleteChoice,
+         destroyChoice,
          clearChoices } from '../../actions/choice_actions';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
 const mapDispatchToProps = (dispatch, ownProps) => ({
   createChoice: choice => dispatch(createChoice(choice)),
   updateChoice: choice => dispatch(updateChoice(choice)),
-  deleteChoice: choice => dispatch(deleteChoice(choice)),
+  destroyChoice: choice => dispatch(destroyChoice(choice)),
   clearChoices: () => dispatch(clearChoices())
 });
 
