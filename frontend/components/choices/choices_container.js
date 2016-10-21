@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
-import Options from './options';
+import Choices from './choices';
 import { createChoice,
-         updateChoice,
-         destroyChoice,
-         clearChoices } from '../../actions/choice_actions';
+        updateChoice,
+        destroyChoice,
+        clearChoices } from '../../actions/choice_actions';
+
 
 const mapStateToProps = (state, ownProps) => ({
   choices: state.choices
@@ -19,4 +20,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Options);
+)(Choices);
