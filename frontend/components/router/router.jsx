@@ -2,7 +2,7 @@ import React from 'react';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 import App from '../app';
 
-import ChoicesContainer from '../options/choices_container';
+import ChoicesContainer from '../choices/choices_container';
 
 const AppRouter = ({ store }) => {
   return (
