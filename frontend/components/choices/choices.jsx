@@ -10,6 +10,11 @@ class Choices extends React.Component {
     this.handleBeginFlow = this.handleBeginFlow.bind(this);
   }
 
+  componentDidMount() {
+    const savedState = JSON.parse(localStorage.getItem("state"));
+    this.props.setChoices(savedState);
+  }
+
   handleClearChoices() {
     this.props.clearChoices();
   }

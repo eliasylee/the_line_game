@@ -20,6 +20,8 @@ const ChoiceReducer = (state = defaultState, action) => {
       return newState;
     case ChoiceConstants.CLEAR_CHOICES:
       return defaultState;
+    case ChoiceConstants.SET_cHOICES:
+      return action.choices;
     default:
       return state;
   }
