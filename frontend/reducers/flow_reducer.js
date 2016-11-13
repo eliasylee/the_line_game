@@ -35,7 +35,7 @@ const FlowReducer = (state = defaultState, action) => {
           newState.grid[x + 1][y][0] = true;
           newState.lastMove = [x + 1, y, "down"];
         } else {
-          if (!newState.lastMove[1] + 1 === grid[0].length - 1) {
+          if (!(newState.lastMove[1] + 1 === grid[0].length - 1)) {
             newState.grid[x][y + 1] = true;
             newState.lastMove = [x, y + 1, "forward"];
           }
