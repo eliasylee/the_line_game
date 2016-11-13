@@ -13,7 +13,8 @@ class Choices extends React.Component {
           {keys.map( key => {
             return <ChoicesItem name={key}
                                 count={choices[key]}
-                                key={key} />;
+                                key={key}
+                                destroyChoice={this.props.destroyChoice} />;
           })}
         </div>
       );

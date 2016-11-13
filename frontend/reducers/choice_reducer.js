@@ -16,7 +16,7 @@ const ChoiceReducer = (state = defaultState, action) => {
       return newState;
     case ChoiceConstants.DESTROY_CHOICE:
       let destroy = action.choice;
-      newState.delete(destroy.key);
+      delete newState[destroy];
       return newState;
     case ChoiceConstants.CLEAR_CHOICES:
       return defaultState;

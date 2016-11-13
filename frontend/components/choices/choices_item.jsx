@@ -8,11 +8,16 @@ class ChoicesItem extends React.Component {
       view: true
     };
     this.toggleView = this.toggleView.bind(this);
+    this.handleDeleteChoice = this.handleDeleteChoice.bind(this);
   }
 
   toggleView() {
     let nextView = !this.state.view;
     this.setState({ "view": nextView });
+  }
+
+  handleDeleteChoice() {
+    this.props.destroyChoice(this.props.name);
   }
 
   viewOrEdit() {
@@ -23,7 +28,13 @@ class ChoicesItem extends React.Component {
           <div className="choiceName">{name}</div>
           <div className="choiceCount">{count}</div>
           <div className="choiceViewToggle"
-               onClick={this.toggleView}>Edit</div>
+               onClick={this.toggleView}>
+               Edit
+          </div>
+          <div className="deleteChoiceButton"
+               onClick={this.handleDeleteChoice}>
+               Delete
+          </div>
         </div>
       );
     } else {
