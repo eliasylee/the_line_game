@@ -24,8 +24,14 @@ class Choices extends React.Component {
     return (
       <div className="choicesPage">
         <div className="choicesHeader">The Line Game</div>
-        {this.renderChoices()}
         <ChoicesFormContainer action="Create"/>
+        <div className="choicesList">
+          <div className="choicesListHeader">
+            <div>Choices</div>
+            <div>Count</div>
+          </div>
+          {this.renderChoices()}
+        </div>
       </div>
     );
   }

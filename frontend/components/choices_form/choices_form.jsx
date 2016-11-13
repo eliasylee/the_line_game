@@ -4,8 +4,8 @@ class ChoicesForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
-      count: ""
+      name: this.props.name,
+      count: this.props.count
     };
     this.handleCreateChoice = this.handleCreateChoice.bind(this);
   }
@@ -15,6 +15,9 @@ class ChoicesForm extends React.Component {
     if (choice.name !== "" && choice.count !== "") {
       this.props.createChoice(choice);
       this.setState({ name: "", count: "" });
+      if (this.props.action === "Done") {
+        this.props.toggleView();
+      }
     }
   }
 
@@ -30,7 +33,7 @@ class ChoicesForm extends React.Component {
         <form onSubmit={this.handleCreateChoice} className="createChoiceForm">
           <div className="choiceNameBox">
             <div className="choiceNameLine">
-              Name
+              Choice
               <input type="text"
                 value={this.state.name}
                 onChange={this.update("name")}

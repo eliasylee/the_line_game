@@ -32,9 +32,8 @@ class ChoicesItem extends React.Component {
           <ChoicesFormContainer action="Done"
                                 name={name}
                                 count={count}
-                                key={name} />
-          <div className="choiceViewToggle"
-               onClick={this.toggleView}>Done</div>
+                                key={name}
+                                toggleView={this.toggleView} />
         </div>
       );
     }
