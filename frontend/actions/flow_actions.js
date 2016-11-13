@@ -2,7 +2,8 @@ export const FlowConstants = {
   CREATE_FLOW: 'CREATE_FLOW',
   TOGGLE_BRIDGE: 'TOGGLE_BRIDGE',
   START_FLOW: 'START_FLOW',
-  CONTINUE_FLOW: 'CONTINUE_FLOW'
+  CONTINUE_FLOW: 'CONTINUE_FLOW',
+  RESET_FLOW: 'RESET_FLOW'
 };
 
 export const createFlow = flow => ({
