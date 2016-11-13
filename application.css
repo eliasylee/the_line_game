@@ -1,0 +1,193 @@
+/* Reset */
+
+html, body, header, nav, h1, a,
+ul, li, strong, main, button, i,
+section, img, div, h2, p, form,
+fieldset, label, input, textarea,
+span, article, footer, time, small {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  text-decoration: inherit;
+  vertical-align: inherit;
+  box-sizing: inherit;
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+    display: block;
+    margin: auto;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="text"],
+input[type="submit"],
+textarea,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+body, html {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div {
+  text-transform: uppercase;
+}
+
+.clearButton,
+.beginButton,
+.choiceViewToggle,
+.deleteChoiceButton,
+.choiceInput,
+.createChoiceButton {
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.choiceInput {
+  cursor: text;
+}
+
+/* Front Page */
+
+.choicesPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.choicesActionBar,
+.choicesList,
+.choicesItemBox {
+  width: 50%;
+  margin: 20px auto;
+}
+
+.choicesActionBar {
+  width: 38%;
+}
+
+.clearButton {
+  background-color: #e6544a;
+}
+
+.beginButton {
+  background-color: #8cff66;
+}
+
+.choicesHeader {
+  font-weight: bold;
+  font-size: 50px;
+  margin: 20px auto;
+}
+
+.choicesActionBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choicesList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.choicesListHeader {
+  height: 100%;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.choicesListHeader > div {
+  height: 100%;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choicesBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Choice Item */
+
+.choicesItemBox {
+  height: 100%;
+  width: 100%;
+}
+
+.choiceItem {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.choiceName,
+.choiceCount {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choiceItemActions {
+  width: 33%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Choice Form */
+
+.createChoiceBox {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.createChoiceForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.choiceNameBox,
+.choiceCountBox,
+.createChoiceButtonBox {
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

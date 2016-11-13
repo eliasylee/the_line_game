@@ -27,13 +27,15 @@ class ChoicesItem extends React.Component {
         <div className="choiceItem">
           <div className="choiceName">{name}</div>
           <div className="choiceCount">{count}</div>
-          <div className="choiceViewToggle"
-               onClick={this.toggleView}>
-               Edit
-          </div>
-          <div className="deleteChoiceButton"
-               onClick={this.handleDeleteChoice}>
-               Delete
+          <div className="choiceItemActions">
+            <div className="choiceViewToggle"
+                 onClick={this.toggleView}>
+                 Edit
+            </div>
+            <div className="deleteChoiceButton"
+                 onClick={this.handleDeleteChoice}>
+                 Delete
+            </div>
           </div>
         </div>
       );

@@ -33,7 +33,6 @@ class ChoicesForm extends React.Component {
         <form onSubmit={this.handleCreateChoice} className="createChoiceForm">
           <div className="choiceNameBox">
             <div className="choiceNameLine">
-              Choice
               <input type="text"
                 value={this.state.name}
                 onChange={this.update("name")}
@@ -42,14 +41,13 @@ class ChoicesForm extends React.Component {
           </div>
           <div className='choiceCountBox'>
             <div className="choiceCountLine">
-              Count
               <input type="text"
                 value={this.state.count}
                 onChange={this.update("count")}
                 className="choiceInput" />
             </div>
           </div>
-          <div className="createChoiceBox">
+          <div className="createChoiceButtonBox">
             <input className="createChoiceButton" type="submit" value={this.props.action} />
           </div>
         </form>

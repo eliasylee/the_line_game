@@ -40,17 +40,17 @@ class Choices extends React.Component {
     return (
       <div className="choicesPage">
         <div className="choicesHeader">The Line Game</div>
-        <ChoicesFormContainer action="Create"/>
         <div className="choicesActionBar">
-          <div className="clearChoicesBox"
+          <div className="clearButton"
                onClick={this.handleClearChoices}>
-               Clear All
+               Clear
           </div>
-          <div className="Begin Flow"
+          <div className="beginButton"
                onClick={this.handleBeginFlow}>
-               Begin Flow
+               Begin
           </div>
         </div>
+        <ChoicesFormContainer action="Create"/>
         <div className="choicesList">
           <div className="choicesListHeader">
             <div>Choices</div>
