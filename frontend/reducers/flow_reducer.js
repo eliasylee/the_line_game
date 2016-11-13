@@ -14,29 +14,34 @@ const FlowReducer = (state = defaultState, action) => {
       return newState;
     case FlowConstants.TOGGLE_BRIDGE:
       let setGrid = newState.grid;
-      let [a, b] = action.coords;
+      let a = action.coords[0];
+      let b = action.coords[1];
       if ((!setGrid[a][b - 2] || !setGrid[a][b - 2][1]) &&
           (!setGrid[a][b + 2] || !setGrid[a][b + 2][1])) {
           newState.grid[a][b][1] = !newState.grid[a][b][1];
       }
       return newState;
     case FlowConstants.START_FLOW:
-      let [i, j] = action.coords;
-      newState.lastMove = [i, j, "forward"];
+      let coords = action.coords;
+      newState.lastMove = [coords[0], coords[1], "forward"];
       return newState;
     case FlowConstants.CONTINUE_FLOW:
       let grid = newState.grid;
       let [x, y, move] = newState.lastMove;
       if (move === "forward") {
-        if (grid[x - 1] && grid[x - 1][y][1]) {
+        if (grid[x - 1] && grid[x - 1][y] && grid[x - 1][y][1]) {
           newState.grid[x - 1][y][0] = true;
           newState.lastMove = [x - 1, y, "down"];
-        } else if (grid[x + 1] && grid[x + 1][y][1]) {
+        } else if (grid[x + 1] && grid[x + 1][y] && grid[x + 1][y][1]) {
           newState.grid[x + 1][y][0] = true;
           newState.lastMove = [x + 1, y, "up"];
         } else {
-          newState.grid[x][y + 1] = true;
-          newState.lastMove = [x, y + 1, "forward"];
+          if (newState.lastMove[1] + 1 === grid[0].length - 1) {
+            newState.done = true;
+          } else {
+            newState.grid[x][y + 1] = true;
+            newState.lastMove = [x, y + 1, "forward"];
+          }
         }
       } else {
         if (move === "down") {
@@ -56,9 +61,6 @@ const FlowReducer = (state = defaultState, action) => {
             newState.lastMove = [x - 1, y, "down"];
           }
         }
-      }
-      if (newState.lastMove[1] === grid[0].length - 1) {
-        newState.done = true;
       }
       return newState;
     default:

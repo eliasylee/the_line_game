@@ -4,22 +4,21 @@ import FlowBridge from './flow_bridge';
 
 const DEFAULT_PATH = [
   null,
-  false, false, false, false, false, false,
-  false, false, false, false, false, false,
-  false, false, false, false, false, false,
-  false, false, false, false, false, false,
-  false, false, false, false, false, false,
+  false, false, false, false, false, false, false, false,
+  false, false, false, false, false, false, false, false,
+  false, false, false, false, false, false, false, false,
+  false, false, false, false, false, false, false, false,
+  false, false, false, false, false, false, false, false,
   null
 ];
 
 const DEFAULT_BRIDGE = [
   null,
-  [false, false], [false, false], [false, false], [false, false], [false, false],
-  [false, false], [false, false], [false, false], [false, false], [false, false],
-  [false, false], [false, false], [false, false], [false, false], [false, false],
-  [false, false], [false, false], [false, false], [false, false], [false, false],
-  [false, false], [false, false], [false, false], [false, false], [false, false],
-  [false, false], [false, false], [false, false], [false, false], [false, false],
+  [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false],
+  [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false],
+  [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false],
+  [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false],
+  [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false], [false, false],
   null
 ];
 
@@ -99,6 +98,7 @@ export default class Flow extends React.Component {
           } else {
             return (
               <FlowPath row={row}
+                        index={index}
                         key={index}
                         startFlow={this.props.startFlow}
                         continueFlow={this.props.continueFlow}

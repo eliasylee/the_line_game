@@ -16,9 +16,9 @@ export default class FlowBridge extends React.Component {
       return "traversedBridge";
     } else {
       if (bridge[1]) {
-        return "unclickedBridge";
-      } else {
         return "clickedBridge";
+      } else {
+        return "unclickedBridge";
       }
     }
   }

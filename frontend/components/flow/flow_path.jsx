@@ -8,14 +8,14 @@ export default class FlowPath extends React.Component {
   }
 
   handleStart() {
-    this.props.startFlow();
-    setTimeout(this.handleContinue, 500);
+    this.props.startFlow([this.props.index, 0]);
+    setTimeout(this.handleContinue, 100);
   }
 
   handleContinue() {
     this.props.continueFlow();
     if (!this.props.done) {
-      setTimeout(this.handleContinue, 500);
+      setTimeout(this.handleContinue, 100);
     }
   }
 
