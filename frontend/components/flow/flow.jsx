@@ -92,6 +92,7 @@ export default class Flow extends React.Component {
           if (row[0] === null) {
             return (
               <FlowBridge row={row}
+                          rowIndex={index}
                           key={index}
                           toggleBridge={this.props.toggleBridge} />
             );

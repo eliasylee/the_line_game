@@ -16,8 +16,8 @@ const FlowReducer = (state = defaultState, action) => {
       let setGrid = newState.grid;
       let a = action.coords[0];
       let b = action.coords[1];
-      if ((!setGrid[a][b - 2] || !setGrid[a][b - 2][1]) &&
-          (!setGrid[a][b + 2] || !setGrid[a][b + 2][1])) {
+      if ((!setGrid[a - 2] || (setGrid[a - 2][b] && !setGrid[a - 2][b][1])) &&
+          (!setGrid[a + 2] || (setGrid[a + 2][b] && !setGrid[a + 2][b][1]))) {
           newState.grid[a][b][1] = !newState.grid[a][b][1];
       }
       return newState;
@@ -31,10 +31,10 @@ const FlowReducer = (state = defaultState, action) => {
       if (move === "forward") {
         if (grid[x - 1] && grid[x - 1][y] && grid[x - 1][y][1]) {
           newState.grid[x - 1][y][0] = true;
-          newState.lastMove = [x - 1, y, "down"];
+          newState.lastMove = [x - 1, y, "up"];
         } else if (grid[x + 1] && grid[x + 1][y] && grid[x + 1][y][1]) {
           newState.grid[x + 1][y][0] = true;
-          newState.lastMove = [x + 1, y, "up"];
+          newState.lastMove = [x + 1, y, "down"];
         } else {
           if (newState.lastMove[1] + 1 === grid[0].length - 1) {
             newState.done = true;
@@ -58,7 +58,7 @@ const FlowReducer = (state = defaultState, action) => {
             newState.lastMove = [x, y + 1, "forward"];
           } else {
             newState.grid[x - 1][y] = true;
-            newState.lastMove = [x - 1, y, "down"];
+            newState.lastMove = [x - 1, y, "up"];
           }
         }
       }
