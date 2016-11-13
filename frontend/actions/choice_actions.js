@@ -3,7 +3,7 @@ export const ChoiceConstants = {
   UPDATE_CHOICE: 'UPDATE_CHOICE',
   DESTROY_CHOICE: 'DESTROY_CHOICE',
   CLEAR_CHOICES: 'CLEAR_CHOICES',
-  SET_CHOICES: 'SET_CHOICE'
+  SET_CHOICES: 'SET_CHOICES'
 };
 
 export const createChoice = choice => ({

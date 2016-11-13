@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   updateChoice: choice => dispatch(updateChoice(choice)),
   destroyChoice: choice => dispatch(destroyChoice(choice)),
   clearChoices: () => dispatch(clearChoices()),
-  setChoices: choices => dispatch(setChoices())
+  setChoices: choices => dispatch(setChoices(choices))
 });
 
 export default connect(
