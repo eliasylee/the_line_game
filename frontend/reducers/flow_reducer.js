@@ -2,7 +2,8 @@ import { FlowConstants } from '../actions/flow_actions';
 import merge from 'lodash/merge';
 const defaultState = {
   grid: [],
-  lastMove: []
+  lastMove: [],
+  done: false
 };
 
 const FlowReducer = (state = defaultState, action) => {
@@ -55,6 +56,9 @@ const FlowReducer = (state = defaultState, action) => {
             newState.lastMove = [x - 1, y, "down"];
           }
         }
+      }
+      if (newState.lastMove[1] === grid[0].length - 1) {
+        newState.done = true;
       }
       return newState;
     default:

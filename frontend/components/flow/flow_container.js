@@ -6,7 +6,9 @@ import { createFlow,
          continueFlow } from '../../actions/flow_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  grid: state.flow.grid
+  grid: state.flow.grid,
+  lastMove: state.flow.lastMove,
+  done: state.flow.done
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

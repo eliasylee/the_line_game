@@ -99,7 +99,10 @@ export default class Flow extends React.Component {
           } else {
             return (
               <FlowPath row={row}
-                        key={index} />
+                        key={index}
+                        startFlow={this.props.startFlow}
+                        continueFlow={this.props.continueFlow}
+                        done={this.props.done} />
             );
           }
         })}
