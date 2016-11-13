@@ -191,3 +191,7 @@ div {
   justify-content: center;
   align-items: center;
 }
+
+.choicesFormBox > .createChoiceBox {
+  width: 100% !important;
+}

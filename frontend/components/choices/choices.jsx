@@ -15,7 +15,7 @@ class Choices extends React.Component {
   }
 
   handleBeginFlow() {
-    this.props.router.push("/");
+    this.props.router.push("/flow");
   }
 
   renderChoices() {

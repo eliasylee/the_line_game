@@ -34,17 +34,19 @@ class ChoicesForm extends React.Component {
           <div className="choiceNameBox">
             <div className="choiceNameLine">
               <input type="text"
-                value={this.state.name}
-                onChange={this.update("name")}
-                className="choiceInput" />
+                     value={this.state.name}
+                     placeholder="Choice"
+                     onChange={this.update("name")}
+                     className="choiceInput" />
             </div>
           </div>
           <div className='choiceCountBox'>
             <div className="choiceCountLine">
               <input type="text"
-                value={this.state.count}
-                onChange={this.update("count")}
-                className="choiceInput" />
+                     value={this.state.count}
+                     placeholder="Count"
+                     onChange={this.update("count")}
+                     className="choiceInput" />
             </div>
           </div>
           <div className="createChoiceButtonBox">
