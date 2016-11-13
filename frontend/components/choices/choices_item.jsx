@@ -7,6 +7,7 @@ class ChoicesItem extends React.Component {
     this.state = {
       view: true
     };
+    this.toggleView = this.toggleView.bind(this);
   }
 
   toggleView() {
@@ -15,11 +16,11 @@ class ChoicesItem extends React.Component {
   }
 
   viewOrEdit() {
-    const { key, count } = this.props;
+    const { name, count } = this.props;
     if (this.state.view) {
       return (
         <div className="choiceItem">
-          <div className="choiceName">{key}</div>
+          <div className="choiceName">{name}</div>
           <div className="choiceCount">{count}</div>
           <div className="choiceViewToggle"
                onClick={this.toggleView}>Edit</div>
@@ -27,11 +28,13 @@ class ChoicesItem extends React.Component {
       );
     } else {
       return (
-        <div classname="choicesFormBox">
-          <ChoicesFormContainer key={key}
-                                count={count} />
+        <div className="choicesFormBox">
+          <ChoicesFormContainer action="Done"
+                                name={name}
+                                count={count}
+                                key={name} />
           <div className="choiceViewToggle"
-               onClick={this.toggleView}>Edit</div>
+               onClick={this.toggleView}>Done</div>
         </div>
       );
     }

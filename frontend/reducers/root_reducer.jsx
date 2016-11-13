@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import ChoiceReducer from './choice_reducer';
 
 const RootReducer = combineReducers({
-  ChoiceReducer
+  choices: ChoiceReducer
 });
 
 export default RootReducer;

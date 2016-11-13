@@ -7,8 +7,8 @@ const ChoiceReducer = (state = defaultState, action) => {
   let newState = merge({}, state);
   switch (action.type) {
     case ChoiceConstants.CREATE_CHOICE:
-      let create = action.choice;
-      newState = newState.merge({ create });
+      let choice = action.choice;
+      newState[choice.name] = choice.count;
       return newState;
     case ChoiceConstants.UPDATE_CHOICE:
       let update = action.choice;

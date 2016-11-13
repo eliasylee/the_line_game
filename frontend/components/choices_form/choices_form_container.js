@@ -3,8 +3,9 @@ import ChoicesForm from './choices_form';
 import { createChoice } from '../../actions/choice_actions';
 
 const mapStateToProps = (state, ownProps) => ({
-  key: ownProps.key,
-  count: ownProps.count
+  name: ownProps.name,
+  count: ownProps.count,
+  action: ownProps.action
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
