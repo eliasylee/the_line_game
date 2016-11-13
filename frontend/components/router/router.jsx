@@ -9,7 +9,7 @@ const AppRouter = ({ store }) => {
     <Router history={hashHistory}>
       <Route path="/" component={App}>
         <IndexRoute component={ChoicesContainer} />
-        <Route path="/flow" component={FlowContainer}/>
+        <Route path="/flow" component={FlowContainer} />
       </Route>
     </Router>
   );
