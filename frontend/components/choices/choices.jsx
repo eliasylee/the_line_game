@@ -20,7 +20,6 @@ class Choices extends React.Component {
   }
 
   handleBeginFlow() {
-    const state = window.store.getState();
     this.props.router.push("/flow");
   }
 
