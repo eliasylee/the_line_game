@@ -82,8 +82,7 @@ div {
 }
 
 .choicesActionBar,
-.choicesList,
-.choicesItemBox {
+.choicesList {
   width: 50%;
   margin: 20px auto;
 }
@@ -150,6 +149,7 @@ div {
 .choiceItem {
   height: 50px;
   width: 100%;
+  margin: 4px auto;
   display: flex;
   justify-content: space-between;
 }
