@@ -21,7 +21,6 @@ class Choices extends React.Component {
 
   handleBeginFlow() {
     const state = window.store.getState();
-    localStorage.setItem("state", JSON.stringify(state.choices));
     this.props.router.push("/flow");
   }
 
