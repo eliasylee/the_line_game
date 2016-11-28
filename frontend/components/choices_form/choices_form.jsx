@@ -27,18 +27,26 @@ class ChoicesForm extends React.Component {
     };
   }
 
+  editOrViewName() {
+    if (this.props.action === "Done") {
+      return <div className="choiceName">{this.state.name}</div>;
+    } else {
+      return <div className="choiceNameLine">
+             <input type="text"
+                    value={this.state.name}
+                    placeholder="Choice"
+                    onChange={this.update("name")}
+                    className="choiceInput" />
+             </div>;
+    }
+  }
+
   render() {
     return (
       <div className="createChoiceBox">
         <form onSubmit={this.handleCreateChoice} className="createChoiceForm">
           <div className="choiceNameBox">
-            <div className="choiceNameLine">
-              <input type="text"
-                     value={this.state.name}
-                     placeholder="Choice"
-                     onChange={this.update("name")}
-                     className="choiceInput" />
-            </div>
+            {this.editOrViewName()}
           </div>
           <div className='choiceCountBox'>
             <div className="choiceCountLine">
